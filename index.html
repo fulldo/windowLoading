@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>Title</title>
+    <style>
+        html, body {
+            min-width: 100%;
+            min-height: 100%;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .loading-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            background: #ccc;
+        }
+
+        .loading-wrapper .loading {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            width: 100%;
+            height: 50px;
+        }
+
+        .loading-wrapper .loading .point {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="loading-wrapper">
+    <div class="loading">
+
+    </div>
+</div>
+<script src="./windowLoading.js"></script>
+<script>
+	(function () {
+		Animation.init({
+			container: document.querySelector('.loading'),
+			pointCount: 4,
+			background: '#fff',
+			size: 10
+		});
+	}())
+</script>
+</body>
+</html>
+
+ 
